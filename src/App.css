@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+  }
+  body {
+    max-width: 100vw;
+    min-height: 100vh;
+    background: url(./Background/background.jpg);
+    background-size: cover;
+    display: flex;
+    margin-top: 1rem;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+  }
+  
+  .app {
+    border-radius: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    padding: 1.5rem;
+    width: 90vw;
+    min-height: 95vh;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #2c0101;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: .5rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: .5rem;
+  }
+  
+  .todo-list {
+    list-style: none;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .todo-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: .5rem;
+    display: flex;
+    align-items: center;
+    min-height: fit-content;
+    max-width: 75vw;
+    margin: .2rem auto;
+    justify-content: space-between;
+    cursor: pointer;
+    overflow-x: hidden;
+    transition: all 0.2s ease-in-out;
+    animation: fadeIn 0.5s ease forwards;
+  }
+  
+  .todo-item:hover {
+    background-color: #cdebc6;
+  }
+  
+  .todo-item.completed {
+    background-color: #fab4b4;
+    animation: fadeIn 0.5s ease forwards;
+  }
+  
+  .completed-todo {
+    text-decoration: line-through;
+    color: tomato;
+  }
+  
+  .reset-button {
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .reset-button:hover {
+    background-color: #d32f2f;
+  }
+  
+  @media (max-width: 350px){
+    .header{
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
+    h1{
+        margin-bottom: .5rem;
+    }
+    .reset-button{
+        margin-bottom: .5rem;
+    }
+  }
